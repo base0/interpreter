@@ -12,6 +12,7 @@ int v[TOTAL_VAR];
 
 p : p NEWLINE s
 p : s
+s : 
 s : ID ASSIGN e           { v[$1] = $3;    }
 e : e MINUS NUMBER        { $$ = $1 - $3;  }
 e : NUMBER                { $$ = $1;       }
