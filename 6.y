@@ -17,7 +17,7 @@ s : ID ASSIGN e           { v[$1] = $3;    }
 e : e MINUS f             { $$ = $1 - $3;  }
 e : f                     { $$ = $1;       }
 f : NUMBER                { $$ = $1;       }
-f : ID                    { $$ = v[$1]     }   
+f : ID                    { $$ = v[$1];    }   
 
 %%
 
